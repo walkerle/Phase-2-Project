@@ -1,12 +1,11 @@
 import React/*, { useState }*/ from 'react';
 
-function JokeCard({ joke, fav, setFav, onDelete }) {
+function JokeCard({ joke, onHeartClick }) {
   
   // const [idEdit, setIdEdit] = useState("")
 
-  function handleFav() {
-    console.log('handleFav clicked');
-    setFav([...fav, joke])
+  function handleHeartClick() {
+    onHeartClick(joke);
   }
 
   function handleEdit() {
@@ -15,27 +14,15 @@ function JokeCard({ joke, fav, setFav, onDelete }) {
     // console.log(idEdit);
   }
 
-  function handleDelete(e){
-    console.log('handleDelete clicked');
-    onDelete(e.target);
-  }
-
-  // const deleteBtn = (fav.forEach( favJoke => favJoke.id.includes(joke.id) ) ? (<button onClick={handleDelete}>X</button>) : "" )
-
-  // console.log(deleteBtn);
-
-  // Need a JokeCard AND FavoriteCard??
-
   return( 
     <div>
       JokeCard
       <div>
           <p>{joke.setup}</p>
           <p>{joke.delivery}</p>
-        {/* {(type === "twopart" ? (<span><p>{setup}</p><p>{delivery}</p></span>) : <p>{joke}</p> )} */}
-        <button onClick={handleFav}>♡</button>
+        {/* {(type === "twopart" ? (<span><p>{joke.setup}</p><p>{joke.delivery}</p></span>) : <p>{joke.joke}</p> )} */}
+        <button onClick={handleHeartClick}>♡</button>
         <button onClick={handleEdit}>Edit</button>
-        <button onClick={handleDelete}>X</button>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Form()  {
+function Form({setFav, fav})  {
 
   const initialForm = { // we want to match the data shape from the API
     setup: "",
@@ -9,15 +9,17 @@ function Form()  {
 
   const [form, setform] = useState(initialForm)
 
+  // fetch url = "http://localhost:3001/favjokes"
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch("", { // need to POST to db.json()
+    fetch("http://localhost:3001/favjokes", { // need to POST to db.json()
       method : "POST",
       headers : { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => setFav([data, ...fav]))
 
     // Want the form to render on the front-end
   }
