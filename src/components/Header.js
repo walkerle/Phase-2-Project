@@ -3,7 +3,7 @@ import JokesList from './JokesList';
 import FavoritesList from './FavoritesList';
 import Form from './Form';
 
-const baseUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"
+const baseUrl = "https://v2.jokeapi.dev/joke/Any?amount=6" // no safe-mode option?
 
 function Header() {
 
@@ -11,10 +11,10 @@ function Header() {
 
   useEffect(() => {
     fetch(baseUrl)
-    .then(res => res.json())
-    .then(jokeObj => setJokes([jokeObj])) // need to make as array of objs
-  }, []) // "SHOULD" return only one joke
-
+    .then((res) => res.json())
+    .then(jokeObj => setJokes(jokeObj.jokes))
+  }, [])
+  
   return (
     <div>
       Header

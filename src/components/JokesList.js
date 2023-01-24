@@ -1,9 +1,7 @@
 import React from 'react';
 import JokeCard from './JokeCard';
 
-function JokesList({jokes}) {
-  // console.log(jokes)
-  // console.log(typeof jokes)
+function JokesList({ jokes }) {
 
   const jokesList = jokes.map(joke => {
     return (
