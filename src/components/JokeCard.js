@@ -1,33 +1,47 @@
-import React, { useState } from 'react';
+import React/*, { useState }*/ from 'react';
 
-function JokeCard({setup, delivery, id}) {
-  const [fav, setFav] = useState([false]);
-  const [idEdit, setIdEdit] = useState("")
+function JokeCard({ joke, fav, setFav, onDelete }) {
+  
+  // const [idEdit, setIdEdit] = useState("")
 
-  function handleFav(e) {
-    console.log(e.target);
-    setFav(true)
-    console.log(fav)
+  function handleFav() {
+    console.log('handleFav clicked');
+    setFav([...fav, joke])
   }
 
-  function handleEdit(e) {
-    console.log(e.target);
-    setIdEdit(id);
-    console.log(idEdit);
+  function handleEdit() {
+    console.log('handleEdit clicked');
+    // setIdEdit(id);
+    // console.log(idEdit);
   }
 
+  function handleDelete(e){
+    console.log('handleDelete clicked');
+    onDelete(e.target);
+  }
+
+  // const deleteBtn = (fav.forEach( favJoke => favJoke.id.includes(joke.id) ) ? (<button onClick={handleDelete}>X</button>) : "" )
+
+  // console.log(deleteBtn);
+
+  // Need a JokeCard AND FavoriteCard??
 
   return( 
     <div>
       JokeCard
       <div>
-        <p>{setup}</p>
-        <p>{delivery}</p>
-        <button onClick={handleFav}>AddToFavorites</button>
+          <p>{joke.setup}</p>
+          <p>{joke.delivery}</p>
+        {/* {(type === "twopart" ? (<span><p>{setup}</p><p>{delivery}</p></span>) : <p>{joke}</p> )} */}
+        <button onClick={handleFav}>♡</button>
         <button onClick={handleEdit}>Edit</button>
+        <button onClick={handleDelete}>X</button>
       </div>
     </div>
   )
 }
 
 export default JokeCard;
+
+// ♡
+// ♥

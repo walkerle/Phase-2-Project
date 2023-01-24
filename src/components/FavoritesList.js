@@ -1,12 +1,20 @@
 import React from 'react';
 import JokeCard from './JokeCard';
 
-function FavoritesList() {
+function FavoritesList({ fav, setFav, onDelete }) {
+
+  const jokesList = fav.map(joke => {
+    return (
+      <JokeCard key={joke.id} joke={joke} fav={fav} setFav={setFav} onDelete={onDelete} />
+    )
+  })
+
   return (
     <div>
       FavoritesList
       <div>
-        <JokeCard />
+        {jokesList}
+        <button>Delete</button>
       </div>
     </div>
   );
