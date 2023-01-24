@@ -1,6 +1,6 @@
 import React from 'react';
 
-function JokeCard({ joke, onHeartClick }) {
+function JokeCard({ joke, onHeartClick, onEditClick }) {
 
   function handleHeartClick() {
     onHeartClick(joke);
@@ -8,6 +8,7 @@ function JokeCard({ joke, onHeartClick }) {
 
   function handleEdit() { // Stretch goal
     console.log('handleEdit clicked');
+    onEditClick(joke);
   }
 
   return( 

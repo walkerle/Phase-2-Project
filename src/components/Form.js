@@ -28,7 +28,7 @@ function Form({setFav, fav})  {
   
   return (
     <div className="new-Joke-form">
-      <h2>New Joke</h2>
+      <h2>Give me a joke!</h2>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}

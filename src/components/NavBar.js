@@ -1,24 +1,23 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-function NavBar({ setCycleCount }) {
-
-  function handleCycle() {
-    console.log('handleCycle clicked');
-    setCycleCount(value => value + 1)
-  }
+function NavBar() {
 
   return (
     <div>
-      NavBar
-      <div>
-        <button>Jokes List</button>
-        <button>Favorites</button>
-        <button>Dark Mode</button>
-      </div>
-      <div>
-        <button>New Joke Form</button>
-        <button onClick={handleCycle}>Cycle Jokes</button>
-      </div>
+      <NavLink exact to="/">
+        Home
+      </NavLink>
+      <NavLink to="/jokeslist">
+        Jokes List
+      </NavLink>
+      <NavLink to="/favslist">
+        Favorites
+      </NavLink>
+      <NavLink to="/jokeform">
+        New Joke Form
+      </NavLink>
+      <button>Dark Mode</button>
     </div>
   );
 }

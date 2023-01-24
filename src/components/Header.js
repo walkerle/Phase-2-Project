@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import JokesList from './JokesList';
 import FavoritesList from './FavoritesList';
 import Form from './Form';
@@ -6,10 +7,11 @@ import Form from './Form';
 const baseUrl = "https://v2.jokeapi.dev/joke/Any?type=twopart&amount=6";
 const favUrl = "http://localhost:3001/favjokes";
 
-function Header({ cycleCount }) {
+function Header() {
 
   const [jokes, setJokes] = useState([]) // Jokes List Array
   const [fav, setFav] = useState([]); // Favorites List Array
+  const [cycleCount, setCycleCount] = useState(0) // cycle jokes
 
   useEffect(() => {
     fetch(baseUrl)
@@ -31,11 +33,18 @@ function Header({ cycleCount }) {
   
   return (
     <div>
-      Header
       <div>
-        <JokesList jokes={jokes} fav={fav} setFav={setFav} />
-        <FavoritesList fav={fav} setFav={setFav} onRemoveFav={onRemoveFav} />
-        <Form setFav={setFav} fav={fav}/>
+        <Switch>
+          <Route path="/jokeslist">
+            <JokesList jokes={jokes} fav={fav} setFav={setFav} setCycleCount={setCycleCount} />
+          </Route>
+          <Route path="/favslist">
+            <FavoritesList fav={fav} setFav={setFav} onRemoveFav={onRemoveFav} />
+          </Route>
+          <Route path="/jokeform">
+            <Form setFav={setFav} fav={fav}/>
+          </Route>
+        </Switch>
       </div>
     </div>
   );
