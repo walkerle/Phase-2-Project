@@ -3,7 +3,7 @@ import JokeCard from './JokeCard';
 
 const favUrl = "http://localhost:3001/favjokes";
 
-function FavoritesList({ fav, setFav, onRemoveFav }) {
+function FavoritesList({ fav, onRemoveFav }) {
 
   function removeFav(jokeObj) {
     onRemoveFav(jokeObj);

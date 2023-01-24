@@ -2,14 +2,12 @@ import React, {useState} from 'react';
 
 function Form({setFav, fav})  {
 
-  const initialForm = { // we want to match the data shape from the API
+  const initialForm = {
     setup: "",
     delivery: ""
   }
 
-  const [form, setform] = useState(initialForm)
-
-  // fetch url = "http://localhost:3001/favjokes"
+  const [form, setForm] = useState(initialForm)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -21,11 +19,11 @@ function Form({setFav, fav})  {
     .then((response) => response.json())
     .then((data) => setFav([data, ...fav]))
 
-    // Want the form to render on the front-end
+    setForm(initialForm);
   }
 
   const handleChange = (e) => {
-    setform({...form, [e.target.name]: e.target.value})
+    setForm({...form, [e.target.name]: e.target.value})
   }
   
   return (
@@ -47,7 +45,7 @@ function Form({setFav, fav})  {
           value={form.delivery}
         />
         <button type="submit">Add Joke</button>
-      </form>
+      </form><br />
     </div>
   );
 }

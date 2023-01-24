@@ -1,17 +1,13 @@
-import React/*, { useState }*/ from 'react';
+import React from 'react';
 
 function JokeCard({ joke, onHeartClick }) {
-  
-  // const [idEdit, setIdEdit] = useState("")
 
   function handleHeartClick() {
     onHeartClick(joke);
   }
 
-  function handleEdit() {
+  function handleEdit() { // Stretch goal
     console.log('handleEdit clicked');
-    // setIdEdit(id);
-    // console.log(idEdit);
   }
 
   return( 
@@ -30,5 +26,5 @@ function JokeCard({ joke, onHeartClick }) {
 
 export default JokeCard;
 
-// ♡
-// ♥
+// ♡ - Stretch goal
+// ♥ - Stretch goal
