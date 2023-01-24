@@ -3,8 +3,7 @@ import JokesList from './JokesList';
 import FavoritesList from './FavoritesList';
 import Form from './Form';
 
-// const baseUrl = "https://v2.jokeapi.dev/joke/Any?amount=6" // no safe-mode option, twopart and single
-const baseUrl = "https://v2.jokeapi.dev/joke/Any?type=twopart&amount=6"; // twopart only
+const baseUrl = "https://v2.jokeapi.dev/joke/Any?type=twopart&amount=6";
 const favUrl = "http://localhost:3001/favjokes";
 
 function Header({ cycleCount }) {

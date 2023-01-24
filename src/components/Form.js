@@ -11,7 +11,7 @@ function Form({setFav, fav})  {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch("http://localhost:3001/favjokes", { // need to POST to db.json()
+    fetch("http://localhost:3001/favjokes", {
       method : "POST",
       headers : { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -49,7 +49,5 @@ function Form({setFav, fav})  {
     </div>
   );
 }
-
-
 
 export default Form;
