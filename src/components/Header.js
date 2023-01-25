@@ -56,7 +56,7 @@ function Header() {
             <JokesList jokes={jokes} fav={fav} setFav={setFav} setCycleCount={setCycleCount} onEditClick={onEditClick} />
           </Route>
           <Route exact path="/favslist">
-            <FavoritesList fav={fav} setFav={setFav} onRemoveFav={onRemoveFav} onEditClick={onEditClick} />
+            <FavoritesList fav={fav} onRemoveFav={onRemoveFav} onEditClick={onEditClick} />
           </Route>
           <Route path="/jokeform">
             <Form setFav={setFav} fav={fav} />
