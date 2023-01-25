@@ -1,24 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function JokeCard({ joke, onHeartClick, onEditClick }) {
+function JokeCard({ joke, onHeartClick, onEditClick, fav }) {
 
   function handleHeartClick() {
     onHeartClick(joke);
   }
 
-  function handleEdit() { // Stretch goal
-    console.log('handleEdit clicked');
+  function handleEdit() {
     onEditClick(joke);
   }
+
+  const editButtonLogic = fav.some(favJoke => favJoke.id === joke.id)
+
+  const editButton = (
+    <Link to={`/favslist/${joke.id}/edit`}>
+      <button onClick={handleEdit}>Edit</button>
+    </Link>
+  )
 
   return( 
     <div>
       JokeCard
       <div>
-          <p>{joke.setup}</p>
-          <p>{joke.delivery}</p>
+        <p>{joke.setup}</p>
+        <p>{joke.delivery}</p>
         <button onClick={handleHeartClick}>♡</button>
-        <button onClick={handleEdit}>Edit</button>
+        {(editButtonLogic ? editButton : "")}
       </div>
     </div>
   )

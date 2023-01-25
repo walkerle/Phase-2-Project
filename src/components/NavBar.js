@@ -11,8 +11,8 @@ function NavBar() {
       <NavLink to="/jokeslist">
         Jokes List
       </NavLink>
-      <NavLink to="/favslist">
-        Favorites
+      <NavLink exact to="/favslist">
+        Favorite Jokes List
       </NavLink>
       <NavLink to="/jokeform">
         New Joke Form

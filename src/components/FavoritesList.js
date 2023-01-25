@@ -3,7 +3,7 @@ import JokeCard from './JokeCard';
 
 const favUrl = "http://localhost:3001/favjokes";
 
-function FavoritesList({ fav, onRemoveFav }) {
+function FavoritesList({ fav, onRemoveFav, onEditClick }) {
 
   function removeFav(jokeObj) {
     onRemoveFav(jokeObj);
@@ -15,13 +15,9 @@ function FavoritesList({ fav, onRemoveFav }) {
     fetch(`${favUrl}/${jokeObj.id}`, config)
   }
 
-  function onEditClick() {
-    console.log('onEditClick');
-  }
-
   const jokesList = fav.map(joke => {
     return (
-      <JokeCard key={joke.id} joke={joke} onHeartClick={removeFav} onEditClick={onEditClick} />
+      <JokeCard key={joke.id} joke={joke} onHeartClick={removeFav} onEditClick={onEditClick} fav={fav} />
     )
   })
 

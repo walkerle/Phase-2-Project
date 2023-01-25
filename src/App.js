@@ -17,5 +17,3 @@ function App() {
 }
 
 export default App;
-
-// Make header the "About" url page?

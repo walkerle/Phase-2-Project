@@ -3,11 +3,11 @@ import JokeCard from './JokeCard';
 
 const favUrl = "http://localhost:3001/favjokes";
 
-function JokesList({ jokes, fav, setFav, setCycleCount }) {
+function JokesList({ jokes, fav, setFav, setCycleCount, onEditClick }) {
 
   function addFav(jokeObj) {
 
-    const config = {
+    const postConfig = {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -15,7 +15,7 @@ function JokesList({ jokes, fav, setFav, setCycleCount }) {
       body: JSON.stringify(jokeObj)
     }
 
-    fetch(favUrl, config)
+    fetch(favUrl, postConfig)
     .then(res => res.json())
     .then(jokeObj => setFav([...fav, jokeObj]));
   }
@@ -24,13 +24,9 @@ function JokesList({ jokes, fav, setFav, setCycleCount }) {
     setCycleCount(value => value + 1)
   }
 
-  function onEditClick() {
-    console.log('onEditClick');
-  }
-
   const jokesList = jokes.map(joke => {
     return (
-      <JokeCard key={joke.id} joke={joke} onHeartClick={addFav} onEditClick={onEditClick} />
+      <JokeCard key={joke.id} joke={joke} onHeartClick={addFav} onEditClick={onEditClick} fav={fav} />
     )
   })
 

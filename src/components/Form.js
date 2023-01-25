@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Form({setFav, fav})  {
 
@@ -9,6 +10,8 @@ function Form({setFav, fav})  {
 
   const [form, setForm] = useState(initialForm)
 
+  const history = useHistory();
+
   const handleSubmit = (e) => {
     e.preventDefault()
     fetch("http://localhost:3001/favjokes", {
@@ -17,7 +20,10 @@ function Form({setFav, fav})  {
       body: JSON.stringify(form),
     })
     .then((response) => response.json())
-    .then((data) => setFav([data, ...fav]))
+    .then((data) => {
+      setFav([data, ...fav])
+      history.push(`/favslist`)
+    })
 
     setForm(initialForm);
   }

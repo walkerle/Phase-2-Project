@@ -3,27 +3,27 @@
     {
       "category": "Pun",
       "type": "twopart",
-      "setup": "What do you call a cheap circumcision?",
-      "delivery": "A rip off.",
+      "setup": "Why did the banana go see a doctor?",
+      "delivery": "Because it wasn't peeling well.",
       "flags": {
-        "nsfw": true,
+        "nsfw": false,
         "religious": false,
         "political": false,
         "racist": false,
         "sexist": false,
-        "explicit": true
+        "explicit": false
       },
-      "id": 156,
-      "safe": false,
+      "id": 256,
+      "safe": true,
       "lang": "en"
     },
     {
       "category": "Spooky",
       "type": "twopart",
-      "setup": "How do Rednecks celebrate Halloween?",
-      "delivery": "Pump kin!",
+      "setup": "Why did the ghost go to the bar?",
+      "delivery": "To get sheet faced.",
       "flags": {
-        "nsfw": true,
+        "nsfw": false,
         "religious": false,
         "political": false,
         "racist": false,
@@ -31,13 +31,13 @@
         "explicit": true
       },
       "safe": false,
-      "id": 300,
+      "id": 315,
       "lang": "en"
     },
     {
       "setup": "Yo Momma",
       "delivery": "So Fat",
-      "id": 301
+      "id": 316
     }
   ]
 }
