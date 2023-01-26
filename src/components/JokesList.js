@@ -31,12 +31,12 @@ function JokesList({ jokes, fav, setFav, setCycleCount, onEditClick }) {
   })
 
   return (
-    <div className="JokesList">
-      <h2><strong>Jokes List</strong></h2>
-      <div>
-        <button onClick={handleCycle}>Cycle Jokes</button><br />
+    <div>
+      <h2>Jokes List</h2>
+      <button className="cycleJokes" onClick={handleCycle}>Cycle Jokes</button><br /><br />
+      <div className="JokesListParent">
         {jokesList}
-      </div>
+      </div><br />
     </div>
   );
 }

@@ -46,9 +46,10 @@ function EditForm({ editJoke, onEditFormSubmit }) {
 
   return (
     <div className="new-Joke-form">
-      <h2>Edit my joke!</h2>
-      <form onSubmit={handleSubmit}>
+      <h2>Edit My Joke!</h2>
+      <form className='FormParent' onSubmit={handleSubmit}>
         <input
+          className='FormChild'
           onChange={handleChange}
           type="text"
           name="setup"
@@ -56,13 +57,14 @@ function EditForm({ editJoke, onEditFormSubmit }) {
           value={form.setup}
         />
         <input
+          className='FormChild'
           onChange={handleChange}
           type="text"
           name="delivery"
           placeholder="Punchline"
           value={form.delivery}
         />
-          <button type="submit">Update Joke</button>
+          <button className='FormSubmitChild' type="submit">Update Joke</button>
       </form><br />
     </div>
   )

@@ -24,9 +24,9 @@ function FavoritesList({ fav, onRemoveFav, onEditClick }) {
   return (
     <div>
       <h2><strong>Favorite Jokes List</strong></h2>
-      <div>
+      <div className="JokesListParent">
         {jokesList}
-      </div>
+      </div><br />
     </div>
   );
 }

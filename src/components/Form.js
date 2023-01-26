@@ -33,25 +33,29 @@ function Form({setFav, fav})  {
   }
   
   return (
-    <div className="new-Joke-form">
-      <h2>Give me a joke!</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          onChange={handleChange}
-          type="text"
-          name="setup"
-          placeholder="Joke setup"
-          value={form.setup}
-        />
-        <input
-          onChange={handleChange}
-          type="text"
-          name="delivery"
-          placeholder="Punchline"
-          value={form.delivery}
-        />
-        <button type="submit">Add Joke</button>
-      </form><br />
+    <div>
+      <h2>Give Me A Joke!</h2>
+      <div>
+        <form className='FormParent' onSubmit={handleSubmit}>
+          <input
+            className='FormChild'
+            onChange={handleChange}
+            type="text"
+            name="setup"
+            placeholder="Joke Setup"
+            value={form.setup}
+          />
+          <input
+            className='FormChild'
+            onChange={handleChange}
+            type="text"
+            name="delivery"
+            placeholder="Joke Delivery"
+            value={form.delivery}
+          />
+          <button className='FormSubmitChild' type="submit">Add Joke</button>
+        </form><br />
+      </div>
     </div>
   );
 }

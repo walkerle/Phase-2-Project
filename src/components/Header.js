@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Home from './Home';
 import JokesList from './JokesList';
 import FavoritesList from './FavoritesList';
 import Form from './Form';
@@ -52,6 +53,9 @@ function Header() {
     <div>
       <div>
         <Switch>
+        <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/jokeslist">
             <JokesList jokes={jokes} fav={fav} setFav={setFav} setCycleCount={setCycleCount} onEditClick={onEditClick} />
           </Route>

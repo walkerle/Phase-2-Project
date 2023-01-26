@@ -15,18 +15,20 @@ function JokeCard({ joke, onHeartClick, onEditClick, fav }) {
 
   const editButton = (
     <Link to={`/favslist/${joke.id}/edit`}>
-      <button onClick={handleEdit}>Edit</button>
+      <button className='JokeCardEditButton' onClick={handleEdit}>Edit</button>
     </Link>
   )
 
   return( 
     <div className='JokesListChild'>
-      JokeCard
-      <div>
-        <p>{joke.setup}</p>
-        <p>{joke.delivery}</p>
-        <button onClick={handleHeartClick}>♡</button>
-        {(editButtonLogic ? editButton : "")}
+      <h3>Joke Card</h3>
+      <div className='JokeCardParent'>
+        <p className="JokeCardChild">{joke.setup}</p>
+        <p className="JokeCardChild">{joke.delivery}</p>
+        <p>
+          <button className='JokeCardHeartButton' onClick={handleHeartClick}>♡</button>
+          {(editButtonLogic ? editButton : "")}
+        </p>
       </div>
     </div>
   )

@@ -1,10 +1,15 @@
 {
   "favjokes": [
     {
-      "category": "Pun",
+      "setup": "Guess what?",
+      "delivery": "Chicken butt.",
+      "id": 1
+    },
+    {
+      "category": "Misc",
       "type": "twopart",
-      "setup": "Why did the banana go see a doctor?",
-      "delivery": "Because it wasn't peeling well.",
+      "setup": "This morning I accidentally made my coffee with Red Bull instead of water.",
+      "delivery": "I was already on the highway when I noticed I forgot my car at home.",
       "flags": {
         "nsfw": false,
         "religious": false,
@@ -13,7 +18,24 @@
         "sexist": false,
         "explicit": false
       },
-      "id": 256,
+      "id": 146,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What do you call a pile of kittens?",
+      "delivery": "A meowntain.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 130,
       "safe": true,
       "lang": "en"
     }
