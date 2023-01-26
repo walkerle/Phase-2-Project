@@ -5,7 +5,7 @@ import FavoritesList from './FavoritesList';
 import Form from './Form';
 import EditForm from './EditForm';
 
-const baseUrl = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,explicit&type=twopart&amount=6";
+const baseUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode&blacklistFlags=nsfw,racist,sexist&type=twopart&amount=6";
 const favUrl = "http://localhost:3001/favjokes";
 
 function Header() {
