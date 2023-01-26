@@ -20,7 +20,7 @@ function JokeCard({ joke, onHeartClick, onEditClick, fav }) {
   )
 
   return( 
-    <div>
+    <div className='JokesListChild'>
       JokeCard
       <div>
         <p>{joke.setup}</p>

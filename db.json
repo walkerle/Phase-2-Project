@@ -16,23 +16,6 @@
       "id": 256,
       "safe": true,
       "lang": "en"
-    },
-    {
-      "category": "Spooky",
-      "type": "twopart",
-      "setup": "Why did the ghost go to the bar?",
-      "delivery": "To get sheet faced.",
-      "flags": {
-        "nsfw": false,
-        "religious": false,
-        "political": false,
-        "racist": false,
-        "sexist": false,
-        "explicit": true
-      },
-      "safe": false,
-      "id": 315,
-      "lang": "en"
     }
   ]
 }

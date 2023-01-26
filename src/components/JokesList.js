@@ -26,12 +26,12 @@ function JokesList({ jokes, fav, setFav, setCycleCount, onEditClick }) {
 
   const jokesList = jokes.map(joke => {
     return (
-      <JokeCard key={joke.id} joke={joke} onHeartClick={addFav} onEditClick={onEditClick} fav={fav} />
+      <JokeCard  key={joke.id} joke={joke} onHeartClick={addFav} onEditClick={onEditClick} fav={fav} />
     )
   })
 
   return (
-    <div>
+    <div className="JokesList">
       <h2><strong>Jokes List</strong></h2>
       <div>
         <button onClick={handleCycle}>Cycle Jokes</button><br />
