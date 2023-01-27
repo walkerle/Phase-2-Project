@@ -100,21 +100,21 @@ h2 {
   gap: 10px;
   margin: auto;
   border: 8px;
-  border-style: groove;
-  border-color: darkblue;
+  /* border-style: groove;
+  border-color: darkblue; */
   border-radius: 20px;
   padding: 20px;
-  background-color: blue;
+  /* background-color:; */
 }
 
 .JokesListChild {
-  background-color: #ACFF40;
-  color: darkgreen;
+  background-color: rgb(241, 63, 51);
+  color: rgb(0, 0, 0);
   font-size: 18px;
   font-family: Century Gothic;
   border: 6px;
   border-style: ridge;
-  border-color: darkgreen;
+  border-color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 3px;
   height: 275px;
@@ -142,32 +142,32 @@ button.cycleJokes {
 .JokeCardChild{
   align-self: center;
   background-color: white;
-  color: darkgreen;
-  font-size: 14px;
+  color: rgb(1, 2, 1);
+  font-size: 16px;
   font-family: arial;
   border: 5px;
   border-style: solid;
-  border-color: darkgreen;
+  border-color: rgb(2, 165, 2);
   padding: 2px;
 }
 
 .JokeCardHeartButton {
   background-color: white;
-  color: red;
+  color: rgb(223, 0, 0);
   font-size: 14px;
   border: 3px;
   border-style: outset;
-  border-color: darkgreen;
+  border-color: rgb(2, 165, 2);
   height: 26px;
 }
 
 .JokeCardEditButton {
   background-color: white;
-  color: darkgreen;
+  color: rgb(0, 0, 0);
   font-size: 14px;
   border: 3px;
   border-style: outset;
-  border-color: darkgreen;
+  border-color: rgb(2, 165, 2);
   height: 26px;
 }
 

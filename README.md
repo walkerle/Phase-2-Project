@@ -1,83 +1,30 @@
 # The Jokesters Page
 
-(Readme content)
+<p><img src="./public/Title Page.jpg" alt="Title Page" width="600px" margin="auto"></p>
+
+The Jokester Page is a collection of jokes from the JokeAPI ([https://v2.jokeapi.dev/](https://v2.jokeapi.dev/)).  Jokes have filtered to have various categories (Programming, Misc, Dark, Pun, Spooky, and Christmas), setup for safe-mode, two-part joke type, and displays six jokes at a time.
 
 ## User Navigation
 
-(Stuff)
+As a user, you will be able to add a joke to your Favorite Jokes List from the collection of jokes in Jokes List.  The Cycle Jokes button will also randomize six new jokes if none of the jokes displayed are desired.
 
-### Header 3
-(more stuff)
+From the Favorite Jokes List, the user can remove a joke from the Favorites Jokes List as well as update an existing joke.
 
-[https://www.google.com/](https://www.google.com/)
+There is also a New Joke Form for the user to add new jokes to their Favorite Jokes List.
 
-# Getting Started with Create React App
+## Contributors
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Walker Le
 
-## Available Scripts
+LinkedIn: [https://www.linkedin.com/in/walker-le/](https://www.linkedin.com/in/walker-le/)
 
-In the project directory, you can run:
+GitHub: [https://github.com/walkerle](https://github.com/walkerle)
 
-### `npm start`
+Griffin Mcarthur
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+LinkedIn: [https://www.linkedin.com/in/griffin-mcarthur/](https://www.linkedin.com/in/griffin-mcarthur/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To get started, fork from the GitHub [here](https://github.com/walkerle/Phase-2-Project).  Enter ```npm install``` in the terminal to download all dependencies and scripts to run the page.  You will need to install and launch JSON-server from your terminal and run the back-end server through Port 3001 using the following CLI:
+```json-server db.json --port 3001```.  To start the page, run ```npm start``` in the terminal.

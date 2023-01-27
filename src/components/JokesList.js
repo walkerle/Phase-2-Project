@@ -17,7 +17,8 @@ function JokesList({ jokes, fav, setFav, setCycleCount, onEditClick }) {
 
     fetch(favUrl, postConfig)
     .then(res => res.json())
-    .then(jokeObj => setFav([...fav, jokeObj]));
+    .then(jokeObj => setFav([...fav, jokeObj]))
+    .catch(error => alert("Joke has already been added to your Favorite Jokes List!"))
   }
 
   function handleCycle() {

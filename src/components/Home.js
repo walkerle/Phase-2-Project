@@ -5,7 +5,7 @@ function Home() {
     <div className="pagenoteParent"><br />
         <h2 className="pagenoteChild">Welcome to The Jokesters Page!</h2>
         <p className="pagenoteChild">
-          You have entered this page under your own will.  The following jokes does not reflect the opinions or views of the page creators.<br />
+          You have entered a place where puns will be made, cringy faces might be expressed, and feelings may be hurt.  Proceed at your own risk!  The following jokes do not reflect the opinions or views of the page creators.<br />
         </p>
         <p className="pagenoteChildWarning"><strong>
           WARNING:<br />
